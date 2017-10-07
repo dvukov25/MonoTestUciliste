@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MonoTestUciliste.Service.Entities.PregledDatumaUpisa>
+@{
+    ViewBag.Title = "Satistika broja studenata";
+}
+<h2>Statistika broja upisa po danu . </h2>
+<table class="table">
+    <tr>
+        <th>
+            Datum Upisa
+        </th>
+        <th>
+            Broj Studenata
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumUpisa)
+            </td>
+            <td>
+                @item.BrojStudenata
+            </td>
+        </tr>
+    }
+</table>
